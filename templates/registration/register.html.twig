@@ -15,6 +15,10 @@
                 field: registrationForm.plainPassword,
                 type: "password"
             } %}
+            {% include 'components/button/simple/_btn-simple-submit.html.twig' with {
+                content: 'Inscription',
+                icon: "rocket-launch"
+            } %}
         </form>
     </div>
 </main>

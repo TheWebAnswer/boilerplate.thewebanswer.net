@@ -1,37 +1,33 @@
-<button
-        data-drawer-target="sidebar-{{ name }}"
-        data-drawer-toggle="sidebar-{{ name }}"
-        aria-controls="sidebar-{{ name }}"
-        type="button"
-        class="inline-flex items-center p-2 mt-1 text-sm text-slate-900 hover:bg-slate-900 hover:text-slate-100 duration-300 rounded sm:hidden dark:text-slate-100 dark:hover:text-slate-900 dark:hover:bg-slate-100"
+<button data-drawer-target="sidebar-{{ name }}" data-drawer-toggle="sidebar-{{ name }}" aria-controls="sidebar-{{ name }}" type="button"
+        class="border-2 border-primary bg-primary duration-300 dark:hover:bg-primary-dark hover:bg-primary-light px-4 py-2 rounded gap-1 inline-flex items-center "
 >
     <span class="sr-only">Ouvrir la barre latérale</span>
-    <svg class="w-5 h-5" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-        <path clip-rule="evenodd" fill-rule="evenodd" d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zm0 10.5a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5a.75.75 0 01-.75-.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10z"></path>
-    </svg>
+    <i class="fa-solid fa-bars"></i>
 </button>
 
 <aside id="sidebar-{{ name }}" class="fixed top-0 left-0 z-40 w-64 h-screen transition-transform -translate-x-full" aria-label="Barre latérale">
-    <div class="h-full px-4 py-4 overflow-y-auto bg-slate-900 text-slate-100 dark:bg-slate-100">
-        <button
-                data-drawer-target="sidebar-{{ name }}"
-                data-drawer-toggle="sidebar-{{ name }}"
-                aria-controls="sidebar-{{ name }}"
-                type="button"
-                class="inline-flex items-center p-2 mt-1 text-sm text-slate-100 hover:bg-slate-100 hover:text-slate-900 duration-300 rounded sm:hidden dark:text-slate-900 dark:hover:text-slate-100 dark:hover:bg-slate-900"
+    <div class="h-full px-4 py-4 overflow-y-auto bg-light dark:bg-dark">
+        <button data-drawer-target="sidebar-{{ name }}" data-drawer-toggle="sidebar-{{ name }}" aria-controls="sidebar-{{ name }}" type="button"
+                class="inline-flex items-center p-2 mt-1 text-slate-900 hover:bg-slate-900 hover:text-slate-100 duration-300 rounded sm:hidden dark:text-slate-100 dark:hover:text-slate-900 dark:hover:bg-slate-100"
         >
             <span class="sr-only">Ouvrir la barre latérale</span>
-            <svg class="w-5 h-5" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                <path clip-rule="evenodd" fill-rule="evenodd" d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zm0 10.5a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5a.75.75 0 01-.75-.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10z"></path>
-            </svg>
+            <i class="fa-solid fa-bars"></i>
         </button>
         <ul class="space-y-2 pt-4">
-            <li>
-                <a href="#" class="flex items-center p-2 text-sm font-normal text-slate-100 rounded dark:text-slate-900 dark:hover:text-slate-100 hover:bg-gray-100 hover:text-slate-900 dark:hover:bg-slate-900 duration-300">
-                    <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M2 10a8 8 0 018-8v8h8a8 8 0 11-16 0z"></path><path d="M12 2.252A8.014 8.014 0 0117.748 8H12V2.252z"></path></svg>
-                    <span class="ml-3">Dashboard</span>
-                </a>
-            </li>
+            {% for item in items %}
+                {% if item.icon is defined %}
+                    {% include 'components/link/_nav-link.html.twig' with {
+                        content: item.content,
+                        path: item.path,
+                        icon: item.icon
+                    } %}
+                {% else %}
+                    {% include 'components/link/_nav-link.html.twig' with {
+                        content: item.content,
+                        path: item.path,
+                    } %}
+                {% endif%}
+            {% endfor %}
         </ul>
     </div>
 </aside>

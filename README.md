@@ -3,7 +3,7 @@
 ## FrontEnd
 - [x] TailwindCSS
 - [x] Flowbite
-- [ ] Header
+- [x] Header
 - [ ] Footer
 - [ ] Components
 - [x] Font Awesome
@@ -11,6 +11,7 @@
 - [ ] Alerts/flash
 - [x] Webpack encore
 - [x] Custom colors
+- [ ] Animations
 
 ## BackEnd
 
@@ -20,6 +21,8 @@
 - [ ] Validations
 - [ ] Forms
 - [ ] Workflow
+- [ ] Fixtures
+- [ ] API use
 
 ## Utils
 - [ ] Favicons

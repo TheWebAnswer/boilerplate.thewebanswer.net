@@ -7,13 +7,13 @@
     <div class="w-full flex flex-col gap-5 max-w-2xl pt-28 pb-48">
         <h2 class="text-3xl">Connexion</h2>
         <form action="" class="w-full flex flex-col gap-5">
-            <div>
-                <label for="inputEmail">Email</label>
-                <input id="inputEmail" name="email" type="email" value="{{ last_username }}" autocomplete="email" autofocus required class=" w-full rounded px-3 py-2" placeholder="Email">
+            <div class="flex flex-col gap-1 py-2 w-full">
+                <label for="inputEmail" class="block text-sm font-medium text-primary">Email</label>
+                <input id="inputEmail" name="email" type="email" value="{{ last_username }}" autocomplete="email" autofocus required class="text-sm rounded block w-full p-2.5 border border-2 duration-200 outline-none focus:border-blue-500 {% if errors is defined %} text-red-900 bg-red-100 border-red-300 {% else %} text-slate-900 bg-white border-blue-300 {% endif %}" placeholder="Email">
             </div>
-            <div>
-                <label for="inputPassword">Mot de passe</label>
-                <input id="inputPassword" name="password" type="password" autocomplete="current-password" required class=" w-full rounded px-3 py-2" placeholder="Mot de passe">
+            <div class="flex flex-col gap-1 py-2 w-full">
+                <label for="inputPassword" class="block text-sm font-medium text-primary">Mot de passe</label>
+                <input id="inputPassword" name="password" type="password" autocomplete="current-password" required class="text-sm rounded block w-full p-2.5 border border-2 duration-200 outline-none focus:border-blue-500 {% if errors is defined %} text-red-900 bg-red-100 border-red-300 {% else %} text-slate-900 bg-white border-blue-300 {% endif %}" placeholder="Mot de passe">
             </div>
             <div>
                 {% include 'components/button/simple/_btn-simple-submit.html.twig' with {

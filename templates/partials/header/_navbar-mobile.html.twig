@@ -1,3 +1,36 @@
-<nav class="py-5 px-5 bg-primary-light dark:bg-primary-dark flex flex-row gap-4 justify-between">
-
+<nav class="py-5 px-5 bg-primary-light dark:bg-primary-dark grid grid-cols-3 gap-4 md:hidden relative">
+    <div class="flex items-center justify-start">
+        {% include 'components/button/aside/_btn-aside-mobile.html.twig' with {
+            name: 'mobile',
+            items: {
+                item1: {
+                    content: "Accueil",
+                    path: path('app_home'),
+                    icon: "home"
+                },
+                item2: {
+                    content: "Connexion",
+                    path: path('app_login'),
+                    icon: "user"
+                },
+                item3: {
+                    content: "Inscription",
+                    path: path('app_register'),
+                    icon: "user"
+                }
+            }
+        }%}
+    </div>
+    <div class="flex items-center justify-center">
+        {% include 'components/logo/_logo-simple.html.twig' with {
+            w: "50px"
+        } %}
+    </div>
+    <div class="flex items-center justify-end">
+        {% include 'components/button/simple/_btn-simple-primary.html.twig' with {
+            content: "",
+            path: path('app_login'),
+            icon: "user"
+        } %}
+    </div>
 </nav>
