@@ -1,0 +1,16 @@
+<li>
+    <a href="{{ path }}" class="
+    px-4 py-2
+    rounded
+    bg-primary hover:bg-primary-dark dark:hover:bg-primary-light
+    duration-300
+    hover:text-light
+    dark:hover:text-dark
+    flex items-center
+    gap-1
+    ">
+        {% if icon is defined %}
+            <i class="fa-solid fa-{{ icon }}"></i>
+        {% endif %}
+        {{ content }}</a>
+</li>

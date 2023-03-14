@@ -1,0 +1,26 @@
+<nav class="py-5 px-5 bg-primary-light dark:bg-primary-dark flex flex-row gap-4 justify-between">
+    {% include 'components/nav/_nav-h-logo.html.twig' with {
+        items: {
+            item1: {
+                content: "Fonctionnalités",
+                path: ""
+            }
+        }
+    } %}
+
+    {% include 'components/nav/_nav-h.html.twig' with {
+        items: {
+            item1: {
+                content: "Connexion",
+                path: path('app_login'),
+                icon: "user"
+            },
+            item2: {
+                content: "Inscription",
+                path: path('app_register'),
+                icon: "square-plus"
+            },
+        }
+    } %}
+
+</nav>

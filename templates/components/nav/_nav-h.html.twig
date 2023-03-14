@@ -1,0 +1,16 @@
+<ul class="flex flex-row gap-4 items-center">
+    {% for item in items %}
+        {% if item.icon is defined %}
+            {% include 'components/link/_nav-link.html.twig' with  {
+                content: item.content,
+                path: item.path,
+                icon: item.icon
+            } %}
+        {% else %}
+            {% include 'components/link/_nav-link.html.twig' with  {
+                content: item.content,
+                path: item.path,
+            } %}
+        {% endif %}
+    {% endfor %}
+</ul>

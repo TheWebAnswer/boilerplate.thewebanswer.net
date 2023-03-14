@@ -1,0 +1,14 @@
+<ul class="flex flex-row gap-4 items-center">
+    <li>
+        <a href="{{ path('app_home') }}">
+            <img width="50px" class="block dark:hidden" src="{{ asset('logos/logo-primary-dark.svg') }}" alt="">
+            <img width="50px" class="hidden dark:block" src="{{ asset('logos/logo-primary-light.svg') }}" alt="">
+        </a>
+    </li>
+    {% for item in items %}
+        {% include 'components/link/_nav-link.html.twig' with  {
+            content: item.content,
+            path: item.path
+        } %}
+    {% endfor %}
+</ul>

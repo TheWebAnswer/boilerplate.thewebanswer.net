@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Log in!{% endblock %}
+
+{% block body %}
+<main class="flex justify-center items-center">
+    <div class="w-full flex flex-col gap-5 max-w-2xl pt-28 pb-48">
+        <h2 class="text-3xl">Connexion</h2>
+        <form action="" class="w-full flex flex-col gap-5">
+            <div>
+                <label for="inputEmail">Email</label>
+                <input id="inputEmail" name="email" type="email" value="{{ last_username }}" autocomplete="email" autofocus required class=" w-full rounded px-3 py-2" placeholder="Email">
+            </div>
+            <div>
+                <label for="inputPassword">Mot de passe</label>
+                <input id="inputPassword" name="password" type="password" autocomplete="current-password" required class=" w-full rounded px-3 py-2" placeholder="Mot de passe">
+            </div>
+            <div>
+                {% include 'components/button/simple/_btn-simple-submit.html.twig' with {
+                    icon: 'rocket-launch',
+                    content: "Se connecter"
+                } %}
+            </div>
+        </form>
+    </div>
+</main>
+{% endblock %}

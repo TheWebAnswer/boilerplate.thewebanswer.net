@@ -1,0 +1,23 @@
+# Fonctionnalités
+
+- tailwindcss
+- flowbite
+- header
+- footer
+- composants
+- apache ready
+- mailer ready
+- favicons & og
+- authentification
+- uuid
+- font awesome
+- responsive
+- alerts/flash
+- validations
+- translation
+- forms personnalisation
+- tests (coming soon)
+- errors pages
+- webpack encore
+- workflow (coming  soon)
+- custom color scheme

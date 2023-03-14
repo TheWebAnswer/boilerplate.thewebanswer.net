@@ -1,0 +1,72 @@
+<section class="bg-primary-light dark:bg-primary-dark grid grid-cols-2 gap-5 md:grid-cols-3 p-5 divide-x-0 md:divide-x-4 divide-dark dark:divide-light font-montserrat">
+    <div class="flex flex-col gap-5">
+        <h2 class="text-2xl">
+            {% include 'components/logo/_logo-h-full.html.twig' with {
+                w: "50px"
+            } %}
+        </h2>
+        <ul class="flex flex-row gap-5">
+            <li class="text-lg"><a href=""><i class="fa-brands fa-twitter"></i></a></li>
+            <li class="text-lg"><a href=""><i class="fa-brands fa-instagram"></i></a></li>
+            <li class="text-lg"><a href=""><i class="fa-brands fa-github"></i></a></li>
+        </ul>
+        <p>Copyright © 2023 | Lucas Warlop | TheWebAnswer</p>
+    </div>
+    <div class="flex justify-center">
+        <ul class="flex flex-col">
+            <li class="flex gap-2.5 flex-col">
+                <a href="" class="flex flex-row items-center gap-1">
+                    Feature
+                </a>
+                <a href="" class="flex flex-row items-center gap-1">
+                   Licence
+                </a>
+                <a href="" class="flex flex-row items-center gap-1">
+                   Terms & conditions
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="flex justify-center">
+        <ul class="flex flex-col">
+            <li class="flex gap-2.5 flex-col">
+                <a href="" class="flex flex-row items-center gap-1">
+                    <img width="25px" class="hidden dark:block" src="{{ asset('logos/hoche/logo-primary-light.svg') }}" alt="">
+                    <img width="25px" class="block dark:hidden" src="{{ asset('logos/hoche/logo-primary-dark.svg') }}" alt="">
+                    <span>TheWebAnswer</span>
+                    <span>|</span>
+                    <span class="text-hoche-primary font-bold">
+                        Hoche
+                    </span>
+                </a>
+                <a href="" class="flex flex-row items-center gap-1">
+                    <img width="25px" class="hidden dark:block" src="{{ asset('logos/impulsion/logo-primary-light.svg') }}" alt="">
+                    <img width="25px" class="block dark:hidden" src="{{ asset('logos/impulsion/logo-primary-dark.svg') }}" alt="">
+                    <span>TheWebAnswer</span>
+                    <span>|</span>
+                    <span class="text-impulsion-primary font-bold">
+                        Impulsion
+                    </span>
+                </a>
+                <a href="" class="flex flex-row items-center gap-1">
+                    <img width="25px" class="hidden dark:block" src="{{ asset('logos/dj2v/logo-primary-light-gradient.svg') }}" alt="">
+                    <img width="25px" class="block dark:hidden" src="{{ asset('logos/dj2v/logo-primary-dark-gradient.svg') }}" alt="">
+                    <span>TheWebAnswer</span>
+                    <span>|</span>
+                    <span class="text-dj2v-primary font-bold">
+                        DJ2V
+                    </span>
+                </a>
+                <a href="" class="flex flex-row items-center gap-1">
+                    <img width="25px" class="hidden dark:block" src="{{ asset('logos/music/logo-primary-light-gradient.svg') }}" alt="">
+                    <img width="25px" class="block dark:hidden" src="{{ asset('logos/music/logo-primary-dark-gradient.svg') }}" alt="">
+                    <span>TheWebAnswer</span>
+                    <span>|</span>
+                    <span class="text-music-primary font-bold">
+                        Music
+                    </span>
+                </a>
+            </li>
+        </ul>
+    </div>
+</section>

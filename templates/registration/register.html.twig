@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Register{% endblock %}
+
+{% block body %}
+<main class="flex justify-center items-center">
+    <div class="w-full flex flex-col gap-5 max-w-2xl pt-28 pb-48">
+        <h2 class="text-3xl">Inscription</h2>
+        <form action="" class="w-full flex flex-col gap-5">
+            {% include "components/form/input/_input-text.html.twig" with {
+                field: registrationForm.email,
+                type: "email"
+            } %}
+            {% include "components/form/input/_input-text.html.twig" with {
+                field: registrationForm.plainPassword,
+                type: "password"
+            } %}
+        </form>
+    </div>
+</main>
+{% endblock %}
