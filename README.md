@@ -1,23 +1,30 @@
 # Fonctionnalités
 
-- tailwindcss
-- flowbite
-- header
-- footer
-- composants
-- apache ready
-- mailer ready
-- favicons & og
-- authentification
-- uuid
-- font awesome
-- responsive
-- alerts/flash
-- validations
-- translation
-- forms personnalisation
-- tests (coming soon)
-- errors pages
-- webpack encore
-- workflow (coming  soon)
-- custom color scheme
+## FrontEnd
+- [x] TailwindCSS
+- [x] Flowbite
+- [ ] Header
+- [ ] Footer
+- [ ] Components
+- [x] Font Awesome
+- [ ] Responsive
+- [ ] Alerts/flash
+- [x] Webpack encore
+- [x] Custom colors
+
+## BackEnd
+
+- [ ] Mailer config
+- [ ] UUID
+- [x] Authentification
+- [ ] Validations
+- [ ] Forms
+- [ ] Workflow
+
+## Utils
+- [ ] Favicons
+- [x] Apache (.htaccess)
+- [ ] Translation
+- [ ] Tests
+- [ ] Errors pages
+- [ ] Makefile
