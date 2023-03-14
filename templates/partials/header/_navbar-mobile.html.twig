@@ -1,25 +1,43 @@
 <nav class="py-5 px-5 bg-primary-light dark:bg-primary-dark grid grid-cols-3 gap-4 md:hidden relative">
     <div class="flex items-center justify-start">
-        {% include 'components/button/aside/_btn-aside-mobile.html.twig' with {
-            name: 'mobile',
-            items: {
-                item1: {
-                    content: "Accueil",
-                    path: path('app_home'),
-                    icon: "home"
-                },
-                item2: {
-                    content: "Connexion",
-                    path: path('app_login'),
-                    icon: "user"
-                },
-                item3: {
-                    content: "Inscription",
-                    path: path('app_register'),
-                    icon: "user"
+        {% if app.user %}
+            {% include 'components/button/aside/_btn-aside-mobile.html.twig' with {
+                name: 'mobile',
+                items: {
+                    item1: {
+                        content: "Accueil",
+                        path: path('app_home'),
+                        icon: "home"
+                    },
+                    item2: {
+                        content: "Deconnexion",
+                        path: path('app_logout'),
+                        icon: "right-from-bracket"
+                    }
                 }
-            }
-        }%}
+            }%}
+        {% else %}
+            {% include 'components/button/aside/_btn-aside-mobile.html.twig' with {
+                name: 'mobile',
+                items: {
+                    item1: {
+                        content: "Accueil",
+                        path: path('app_home'),
+                        icon: "home"
+                    },
+                    item2: {
+                        content: "Connexion",
+                        path: path('app_login'),
+                        icon: "right-to-bracket"
+                    },
+                    item3: {
+                        content: "Inscription",
+                        path: path('app_register'),
+                        icon: "user-plus"
+                    }
+                }
+            }%}
+        {% endif %}
     </div>
     <div class="flex items-center justify-center">
         {% include 'components/logo/_logo-simple.html.twig' with {
@@ -27,10 +45,18 @@
         } %}
     </div>
     <div class="flex items-center justify-end">
-        {% include 'components/button/simple/_btn-simple-primary.html.twig' with {
-            content: "",
-            path: path('app_login'),
-            icon: "user"
-        } %}
+        {% if app.user %}
+            {% include 'components/button/simple/_btn-simple-primary.html.twig' with {
+                content: "",
+                path: path('app_logout'),
+                icon: "right-from-bracket"
+            } %}
+        {% else %}
+            {% include 'components/button/simple/_btn-simple-primary.html.twig' with {
+                content: "",
+                path: path('app_login'),
+                icon: "right-to-bracket"
+            } %}
+        {% endif %}
     </div>
 </nav>

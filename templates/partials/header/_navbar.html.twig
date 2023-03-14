@@ -8,19 +8,31 @@
         }
     } %}
 
-    {% include 'components/nav/_nav-h.html.twig' with {
-        items: {
-            item1: {
-                content: "Connexion",
-                path: path('app_login'),
-                icon: "user"
-            },
-            item2: {
-                content: "Inscription",
-                path: path('app_register'),
-                icon: "square-plus"
-            },
-        }
-    } %}
+    {% if app.user %}
+        {% include 'components/nav/_nav-h.html.twig' with {
+            items: {
+                item1: {
+                    content: "Deconnexion",
+                    path: path('app_logout'),
+                    icon: "right-from-bracket"
+                },
+            }
+        } %}
+    {% else %}
+        {% include 'components/nav/_nav-h.html.twig' with {
+            items: {
+                item1: {
+                    content: "Connexion",
+                    path: path('app_login'),
+                    icon: "right-to-bracket"
+                },
+                item2: {
+                    content: "Inscription",
+                    path: path('app_register'),
+                    icon: "user-plus"
+                },
+            }
+        } %}
+    {% endif %}
 
 </nav>
