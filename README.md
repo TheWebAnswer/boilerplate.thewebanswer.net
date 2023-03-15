@@ -19,6 +19,7 @@
 - [ ] UUID
 - [x] Authentification
   - [x] Email verification
+  - [ ] Forgot password
 - [ ] Validations
 - [ ] Forms
 - [ ] File uploads (avatar)

@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Reset your password{% endblock %}
+
+{% block body %}
+<main class="flex justify-center items-center">
+    <div class="w-full flex flex-col gap-5 max-w-2xl pt-28 pb-48">
+        <h2 class="text-3xl">Réinitialisez votre mot de passe</h2>
+        <form method="POST" name="reset_password_request_form" class="w-full flex flex-col gap-5">
+            {% include "components/form/input/_input-text.html.twig" with {
+                field: requestForm.email,
+                type: "email"
+            } %}
+
+            {{ form_row(requestForm._token) }}
+
+            {% include 'components/button/simple/_btn-simple-submit.html.twig' with {
+                content: 'Envoyer un mail',
+                icon: "paper-plane"
+            } %}
+        </form>
+    </div>
+</main>
+{% endblock %}

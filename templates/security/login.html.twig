@@ -16,6 +16,10 @@
                 <input id="inputPassword" name="password" type="password" autocomplete="current-password" required class="text-sm rounded text-dark block w-full p-2.5 border border-2 border-primary duration-200 outline-none focus:border-primary {% if errors is defined %} text-red-900 bg-red-100 border-red-300 {% else %} text-slate-900 bg-white border-blue-300 {% endif %}" placeholder="Mot de passe">
             </div>
 
+            <div class="flex flex-row">
+                <a class="text-sm text-primary font-semibold" href="{{ path('app_forgot_password_request') }}">Mot de passe oublié</a>
+            </div>
+
             <input type="hidden" name="_csrf_token"
                    value="{{ csrf_token('authenticate') }}"
             >

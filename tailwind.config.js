@@ -3,7 +3,7 @@ module.exports = {
   darkMode: "media",
   content: [
     "./assets/**/*.js",
-    "./templates/**/*.html.twig",
+    "./templates/**/*",
     "./node_modules/flowbite/**/*.js"
   ],
   theme: {

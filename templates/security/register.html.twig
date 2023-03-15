@@ -3,9 +3,6 @@
 {% block title %}Register{% endblock %}
 
 {% block body %}
-{% for flashError in app.flashes('verify_email_error') %}
-    <div class="alert alert-danger" role="alert">{{ flashError }}</div>
-{% endfor %}
 <main class="flex justify-center items-center">
     <div class="w-full flex flex-col gap-5 max-w-2xl pt-28 pb-48">
         <h2 class="text-3xl">Inscription</h2>
