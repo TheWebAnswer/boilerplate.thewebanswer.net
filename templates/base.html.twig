@@ -2,7 +2,12 @@
 <html lang="{{ app.request.locale }}" class="bg-light dark:bg-dark text-dark dark:text-light">
     <head>
         <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %} | Boilerplate | TheWebAnswer</title>
+        <title>{% block title %}Welcome{% endblock %} | TheWebAnswer | Boilerplate | Symfony 6 - Modèle de départ pour des applications web performantes</title>
+
+        {% include 'partials/head/metatags.html.twig' %}
+        {% include 'partials/head/favicons.html.twig' %}
+        {% include 'partials/head/socials.html.twig' %}
+        {% include 'partials/head/externals.html.twig' %}
 
         {% block stylesheets %}
             {{ encore_entry_link_tags('app') }}

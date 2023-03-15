@@ -39,7 +39,7 @@ npm run build
 - [x] Authentification
   - [x] Email verification
   - [x] Forgot password
-- [ ] Validations
+- [x] Validations
 - [x] Forms
 - [ ] File uploads (avatar)
 - [ ] Workflow
@@ -53,6 +53,6 @@ npm run build
 - [x] Apache (.htaccess)
 - [ ] Translation
 - [ ] Tests
-- [ ] Errors pages
+- [x] Errors pages
 - [ ] Makefile
 - [x] ReCaptchaV3
