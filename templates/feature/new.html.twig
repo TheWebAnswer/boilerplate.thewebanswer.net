@@ -11,10 +11,4 @@
 {% include 'feature/_actions.html.twig' %}
 
 {{ include('feature/_form.html.twig') }}
-
-{% include 'components/button/simple/_btn-simple-primary.html.twig' with{
-    path: path('app_feature_index'),
-    content: "Retour à la liste",
-    icon: "left"
-} %}
 {% endblock %}

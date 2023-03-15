@@ -96,3 +96,51 @@
         </div>
     {%- endif -%}
 {%- endblock date_widget -%}
+
+{%- block form_start -%}
+    {%- do form.setMethodRendered() -%}
+    {% set method = method|upper %}
+    {%- if method in ["GET", "POST"] -%}
+        {% set form_method = method %}
+    {%- else -%}
+        {% set form_method = "POST" %}
+    {%- endif -%}
+<form{% if name != '' %} name="{{ name }}"{% endif %} method="{{ form_method|lower }}"{% if action != '' %} action="{{ action }}"{% endif %}{{ block('attributes') }}{% if multipart %} enctype="multipart/form-data"{% endif %} class="py-2">
+    {%- if form_method != method -%}
+        <input type="hidden" name="_method" value="{{ method }}" />
+    {%- endif -%}
+{%- endblock form_start -%}
+
+{%- block form_end -%}
+    {%- if not render_rest is defined or render_rest -%}
+        {{ form_rest(form) }}
+    {%- endif -%}
+</form>
+{%- endblock form_end -%}
+
+
+{%- block form_label_content -%}
+    {%- if label is empty -%}
+        {%- if label_format is not empty -%}
+            {% set label = label_format|replace({
+                '%name%': name,
+                '%id%': id,
+            }) %}
+        {%- else -%}
+            {% set label = name|humanize %}
+        {%- endif -%}
+    {%- endif -%}
+    {%- if translation_domain is same as(false) -%}
+        {%- if label_html is same as(false) -%}
+            {{- label -}}
+        {%- else -%}
+            {{- label|raw -}}
+        {%- endif -%}
+    {%- else -%}
+        {%- if label_html is same as(false) -%}
+            {{- label|trans(label_translation_parameters, translation_domain) -}}
+        {%- else -%}
+            {{- label|trans(label_translation_parameters, translation_domain)|raw -}}
+        {%- endif -%}
+    {%- endif -%}
+{%- endblock form_label_content -%}

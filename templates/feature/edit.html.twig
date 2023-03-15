@@ -3,11 +3,12 @@
 {% block title %}Edit Feature{% endblock %}
 
 {% block body %}
-    <h1>Edit Feature</h1>
+    {% include 'components/header/_section-header.html.twig' with {
+        title: 'Modifier une fonctionnalité',
+        description: 'Ajouter des fonctionnalités pour cette boilerplate à la liste'
+    } %}
 
-    {{ include('feature/_form.html.twig', {'button_label': 'Update'}) }}
+    {% include 'feature/_actions.html.twig' %}
 
-    <a href="{{ path('app_feature_index') }}">back to list</a>
-
-    {{ include('feature/_delete_form.html.twig') }}
+    {{ include('feature/_form.html.twig') }}
 {% endblock %}

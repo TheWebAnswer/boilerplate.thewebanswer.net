@@ -12,6 +12,7 @@
 - [x] Webpack encore
 - [x] Custom colors
 - [ ] Animations
+- [ ] Render datetime Twig
 
 ## BackEnd
 

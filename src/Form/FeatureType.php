@@ -16,7 +16,6 @@ class FeatureType extends AbstractType
         $builder
             ->add('title')
             ->add('description')
-            ->add('slug')
             ->add('isDone')
             ->add('link')
         ;

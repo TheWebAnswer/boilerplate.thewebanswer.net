@@ -1,8 +1,11 @@
 {{ form_start(form) }}
-    {{ form_row(form) }}
+    {{ form_row(form.title) }}
+    {{ form_row(form.description) }}
+    {{ form_row(form.link) }}
+    {{ form_row(form.isDone) }}
     {% include  'components/button/simple/_btn-simple-submit.html.twig' with {
-        content: 'Ajouter',
-        icon: "square-plus"
+        content: 'Valider',
+        icon: "thumbs-up"
     } %}
 {{ form_end(form) }}
 
