@@ -3,6 +3,9 @@
 ## Pré-requis
 
 - PHP
+- Symfony
+- Node
+- TailwindCSS
 
 # Fonctionnalités
 
