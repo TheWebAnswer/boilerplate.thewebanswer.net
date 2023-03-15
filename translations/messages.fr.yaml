@@ -1,0 +1,26 @@
+projects: projets
+project: projet
+users: utilisateurs
+user: utilisateur
+blog: blog
+sign-in: connexion
+sign-up: inscription
+sign-out: déconnexion
+
+update: modifier
+create: créer
+my posts: mes articles
+
+articles: articles
+
+monday: lundi
+tuesday: mardi
+Wednesday: mercredi
+thursday: jeudi
+friday: vendredi
+saturday: samedi
+sunday: dimanche
+
+administration: 'administration'
+read: 'consulter'
+client: 'client'
