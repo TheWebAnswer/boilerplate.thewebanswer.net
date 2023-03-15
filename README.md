@@ -1,3 +1,9 @@
+# Informations
+
+## Pré-requis
+
+- PHP
+
 # Fonctionnalités
 
 ## FrontEnd
