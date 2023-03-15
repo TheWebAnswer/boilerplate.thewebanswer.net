@@ -15,17 +15,18 @@
 
 ## BackEnd
 
-- [ ] Mailer config
+- [x] Mailer config
 - [ ] UUID
 - [x] Authentification
   - [x] Email verification
-  - [ ] Forgot password
+  - [x] Forgot password
 - [ ] Validations
-- [ ] Forms
+- [x] Forms
 - [ ] File uploads (avatar)
 - [ ] Workflow
 - [ ] Fixtures
 - [ ] API use
+- [ ] CRUD
 
 ## Utils
 - [ ] Favicons

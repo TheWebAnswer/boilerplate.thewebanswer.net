@@ -1,9 +1,84 @@
-<h1>Hi!</h1>
+{% apply inline_css(source('emails/welcome.css')) %}
 
-<p>To reset your password, please visit the following link</p>
+    <!doctype html>
+    <html lang="fr">
 
-<a href="{{ url('app_reset_password', {token: resetToken.token}) }}">{{ url('app_reset_password', {token: resetToken.token}) }}</a>
+    <head>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+        <title>Réinitialisez votre mot de passe</title>
+        <meta name="description" content="New Account Email Template.">
+        <style type="text/css">
+            a:hover {
+                text-decoration: underline !important;
+            }
+        </style>
+    </head>
 
-<p>This link will expire in {{ resetToken.expirationMessageKey|trans(resetToken.expirationMessageData, 'ResetPasswordBundle') }}.</p>
+    <body marginheight="0" topmargin="0" marginwidth="0" style="margin: 0px; background-color: #f1f5f9;" leftmargin="0">
+    <!-- 100% body table -->
+    <table cellspacing="0" border="0" cellpadding="0" width="100%" bgcolor="#f2f3f8"
+           style="font-family: 'Inter', sans-serif;">
+        <tr>
+            <td>
+                <table style="background-color: #f1f5f9; max-width:670px; margin:0 auto;" width="100%" border="0"
+                       align="center" cellpadding="0" cellspacing="0">
+                    <tr>
+                        <td style="height:40px;">&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center;">
+                            <a href="{{ absolute_url('/') }}" title="logo" target="_blank">
+                                <img width="60" src="{{ absolute_url('/logos/logo-primary-dark.svg') }}" title="logo"
+                                     alt="logo">
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="height:20px;">&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <table width="95%" border="0" align="center" cellpadding="0" cellspacing="0"
+                                   style="max-width:670px; background:#0f172a; border-radius:8px; text-align:center;-webkit-box-shadow:0 6px 18px 0 rgba(0,0,0,.06);-moz-box-shadow:0 6px 18px 0 rgba(0,0,0,.06);box-shadow:0 6px 18px 0 rgba(0,0,0,.06);">
+                                <tr>
+                                    <td style="height:40px;">&nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding:0 35px;">
+                                        <h1>Bonjour !</h1>
 
-<p>Cheers!</p>
+                                        <p>Pour réinitialiser votre mot de passe, veuillez visiter le lien suivant</p>
+
+                                        <a href="{{ url('app_reset_password', {token: resetToken.token}) }}">{{ url('app_reset_password', {token: resetToken.token}) }}</a>
+
+                                        <p>Ce lien expirera dans {{ resetToken.expirationMessageKey|trans(resetToken.expirationMessageData, 'ResetPasswordBundle') }}.</p>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="height:40px;">&nbsp;</td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="height:20px;">&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center;">
+                            <p style="font-size:14px; text-align: center; color:rgba(69, 80, 86, 0.7411764705882353); line-height:18px; margin:0 0 0;">
+                                &copy; <strong>thewebanswer.net</strong></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="height:80px;">&nbsp;</td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+    <!--/100% body table-->
+    </body>
+
+    </html>
+{% endapply %}

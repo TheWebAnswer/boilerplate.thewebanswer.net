@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Montserrat&display=swap');
+
+a {
+    background:#f1f5f9;
+    text-decoration:none !important;
+    display:inline-block;
+    font-weight:500;
+    margin-top:24px;
+    color:#0f172a;
+    text-transform:uppercase;
+    font-size:14px;
+    padding:10px 24px;
+    display:inline-block;
+    border-radius:5px;
+}
+
+h1 {
+    color: #f1f5f9;
+    font-size: 32px;
+    margin:0;
+    padding:0;
+    font-family: Montserrat, sans-serif;
+    font-weight: 500;
+}
+h2 {
+    color: #bfdbfe;
+    font-size: 10px;
+    text-transform: uppercase;
+    margin:0;
+    padding:0;
+    font-family: Montserrat, sans-serif;
+}
+
+h3 {
+    color: #bfdbfe;
+    font-size: 10px;
+    text-transform: uppercase;
+    margin:0;
+    font-family: Montserrat, sans-serif;
+    padding-bottom: 20px;
+}
+p {
+    color: #f1f5f9;
+    text-align: left;
+    font-family: Inter, sans-serif;
+}

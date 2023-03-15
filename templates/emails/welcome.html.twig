@@ -45,17 +45,21 @@
                                 </tr>
                                 <tr>
                                     <td style="padding:0 35px;">
-                                        <h1>Bonjour !</h1>
+                                        {% apply markdown_to_html %}
+                                            ## Bienvenue sur
+                                            # TheWebAnswer
+                                            ### {{ firstname }} {{ lastname }}
 
-                                        <p>
-                                            Veuillez confirmer votre adresse e-mail en cliquant sur le lien suivant: <br><br>
-                                            <a href="{{ signedUrl|raw }}">Confirmer mon e-mail</a>.
-                                            Ce lien expirera dans {{ expiresAtMessageKey|trans(expiresAtMessageData, 'VerifyEmailBundle') }}.
-                                        </p>
+                                            Bonjour {{ firstname }} {{ lastname }},
 
-                                        <p>
-                                            Cheers!
-                                        </p>
+                                            Nous tenons à vous remercier pour votre inscription à notre application. Cependant, avant que vous puissiez accéder à toutes les fonctionnalités de l'application, nous devons valider votre compte.
+
+                                            Notre équipe examine actuellement votre demande, celle-ci sera traiter dans les meilleurs délais. Un email de confirmations vous sera envoyé dès l'activation de votre compte.
+
+                                            Cordialement,
+
+                                            L'équipe TheWebAnswer.
+                                        {% endapply %}
                                     </td>
                                 </tr>
                                 <tr>
