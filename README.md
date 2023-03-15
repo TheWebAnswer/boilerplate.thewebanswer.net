@@ -1,3 +1,11 @@
+# Informations
+
+## Pré-requis
+
+- PHP
+- Symfony
+- Node
+
 # Fonctionnalités
 
 ## FrontEnd
