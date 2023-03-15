@@ -1,4 +1,4 @@
-{% extends '../base.html.twig' %}
+{% extends 'base.html.twig' %}
 
 {% block title %}Register{% endblock %}
 
@@ -10,26 +10,27 @@
     <div class="w-full flex flex-col gap-5 max-w-2xl pt-28 pb-48">
         <h2 class="text-3xl">Inscription</h2>
         <form action="{{ registrationForm.vars.action }}" method="{{ registrationForm.vars.method }}" name="{{ registrationForm.vars.name }}" class="w-full flex flex-col gap-5">
-            {% include "../components/form/input/_input-text.html.twig" with {
+            {% include "components/form/input/_input-text.html.twig" with {
                 field: registrationForm.email,
                 type: "email"
             } %}
-            {% include "../components/form/input/_input-text.html.twig" with {
+            {% include "components/form/input/_input-text.html.twig" with {
                 field: registrationForm.plainPassword.first,
                 type: "password"
             } %}
-            {% include "../components/form/input/_input-text.html.twig" with {
+            {% include "components/form/input/_input-text.html.twig" with {
                 field: registrationForm.plainPassword.second,
                 type: "password"
             } %}
-            {% include "../components/form/input/_input-checkbox.html.twig" with {
+            {% include "components/form/input/_input-checkbox.html.twig" with {
                 field: registrationForm.agreeTerms,
                 type: "checkbox"
             } %}
 
+            {{ form_row(registrationForm.captcha) }}
             {{ form_row(registrationForm._token) }}
 
-            {% include '../components/button/simple/_btn-simple-submit.html.twig' with {
+            {% include 'components/button/simple/_btn-simple-submit.html.twig' with {
                 content: 'Inscription',
                 icon: "rocket-launch"
             } %}

@@ -33,4 +33,4 @@
 - [ ] Tests
 - [ ] Errors pages
 - [ ] Makefile
-- [ ] ReCaptchaV3
+- [x] ReCaptchaV3
