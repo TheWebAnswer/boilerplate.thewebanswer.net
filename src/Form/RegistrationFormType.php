@@ -58,10 +58,7 @@ class RegistrationFormType extends AbstractType
                 'second_options' => ['label' => 'Répéter le mot de passe'],
             ])
             ->add('captcha', Recaptcha3Type::class, [
-                'constraints' => new Recaptcha3 ([
-                    'message' => 'karser_recaptcha3.message',
-                    'messageMissingValue' => 'karser_recaptcha3.message_missing_value',
-                ]),
+                'constraints' => new Recaptcha3(),
                 'action_name' => 'register',
                 'locale' => 'fr',
             ])
