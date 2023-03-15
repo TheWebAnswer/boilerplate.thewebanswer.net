@@ -12,12 +12,13 @@
 - [x] Webpack encore
 - [x] Custom colors
 - [ ] Animations
-- [ ] Render datetime Twig
+- [x] Render datetime Twig
 
 ## BackEnd
 
 - [x] Mailer config
-- [ ] UUID
+- [x] UUID
+- [x] Trait
 - [x] Authentification
   - [x] Email verification
   - [x] Forgot password
@@ -27,8 +28,8 @@
 - [ ] Workflow
 - [ ] Fixtures
 - [ ] API use
-- [ ] CRUD
-- [ ] Slug
+- [x] CRUD
+- [x] Slug
 
 ## Utils
 - [ ] Favicons
