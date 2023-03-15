@@ -5,6 +5,7 @@
 - PHP
 - Symfony
 - Node
+- TailwindCSS
 
 # Fonctionnalités
 
