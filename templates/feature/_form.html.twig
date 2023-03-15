@@ -1,0 +1,8 @@
+{{ form_start(form) }}
+    {{ form_row(form) }}
+    {% include  'components/button/simple/_btn-simple-submit.html.twig' with {
+        content: 'Ajouter',
+        icon: "square-plus"
+    } %}
+{{ form_end(form) }}
+

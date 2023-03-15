@@ -1,0 +1,20 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New Feature{% endblock %}
+
+{% block body %}
+{% include 'components/header/_section-header.html.twig' with {
+    title: 'Ajouter une fonctionnalité',
+    description: 'Ajouter des fonctionnalités pour cette boilerplate à la liste'
+} %}
+
+{% include 'feature/_actions.html.twig' %}
+
+{{ include('feature/_form.html.twig') }}
+
+{% include 'components/button/simple/_btn-simple-primary.html.twig' with{
+    path: path('app_feature_index'),
+    content: "Retour à la liste",
+    icon: "left"
+} %}
+{% endblock %}

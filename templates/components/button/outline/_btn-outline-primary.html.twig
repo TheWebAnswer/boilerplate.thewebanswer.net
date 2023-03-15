@@ -2,5 +2,10 @@
     {% if icon is defined %}
         <i class="fa-solid fa-{{ icon }}"></i>
     {% endif %}
+        {% if content is defined %}
     {{ content }}
+        {% endif %}
+        {% if srOnly is defined %}
+        <span class="sr-only">{{ srOnly }}</span>
+        {% endif %}
 </a>

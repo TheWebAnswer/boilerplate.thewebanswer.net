@@ -18,7 +18,9 @@
             {% include 'partials/header/_navbar-mobile.html.twig' %}
             {% include 'partials/header/_alerts.html.twig' %}
         </header>
-        {% block body %}{% endblock %}
+        <main class="min-h-screen py-5 px-56">
+            {% block body %}{% endblock %}
+        </main>
         <footer>
             {% include 'partials/footer/_footer.html.twig' %}
         </footer>

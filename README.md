@@ -27,6 +27,7 @@
 - [ ] Fixtures
 - [ ] API use
 - [ ] CRUD
+- [ ] Slug
 
 ## Utils
 - [ ] Favicons
