@@ -2,7 +2,7 @@
     <div class="max-w-2xl">
         {% include 'components/logo/_logo-h-full-hero.html.twig' %}
         <p class="pb-5">
-            Le projet consiste en le développement d'un boilerplate pour le framework PHP Symfony 6. Un boilerplate est un modèle de base pour la création d'un projet web, qui inclut des fonctionnalités de base préconfigurées, telles que l'authentification, la gestion des utilisateurs, la sécurité, la gestion de fichiers, et bien d'autres encore.
+            {{ 'hero_description'|trans }}
         </p>
         {% include 'components/button/simple/_btn-simple-primary.html.twig' with {
             icon: "rocket-launch",

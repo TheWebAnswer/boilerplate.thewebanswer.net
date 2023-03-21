@@ -1,6 +1,6 @@
-hero_description: Le projet consiste en le développement d'un boilerplate pour le framework PHP Symfony 6. Un boilerplate est un modèle de base pour la création d'un projet web, qui inclut des fonctionnalités de base préconfigurées, telles que l'authentification, la gestion des utilisateurs, la sécurité, la gestion de fichiers, et bien d'autres encore.
+hero_description: The project consists of the development of a boilerplate for the Symfony 6 PHP framework. A boilerplate is a basic model for the creation of a web project, which includes preconfigured basic functionalities, such as authentication, management of users, security, file management, and more.
 hero_btn_1: Git Clone
-hero_btn_2: Découvrir les fonctionnalités
+hero_btn_2: Discover the features
 
 projects: projets
 project: projet

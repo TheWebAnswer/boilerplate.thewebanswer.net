@@ -5,32 +5,11 @@
                 w: "50px"
             } %}
         </h2>
-        <ul class="flex flex-row gap-5">
-            <li class="text-lg"><a href="https://twitter.com/lucaswarlop" target="_blank"><i class="fa-brands fa-twitter"></i></a></li>
-            <li class="text-lg"><a href="https://instagram.com/thewebanswer" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
-            <li class="text-lg"><a href="https://github.com/TheWebAnswer/boilerplate.thewebanswer.net" target="_blank"><i class="fa-brands fa-github"></i></a></li>
-        </ul>
-        <ul class="flex flex-col">
-            <li class="flex gap-2.5 flex-row">
-                <a href="https://canthoche.thewebanswer.net/" target="_blank" class="flex flex-row items-center gap-1">
-                    <img width="25px" class="hidden dark:block" src="{{ asset('logos/hoche/logo-primary-light.svg') }}" alt="">
-                    <img width="25px" class="block dark:hidden" src="{{ asset('logos/hoche/logo-primary-dark.svg') }}" alt="">
-                </a>
-                <a href="https://impulsion.thewebanswer.net/" target="_blank" class="flex flex-row items-center gap-1">
-                    <img width="25px" class="hidden dark:block" src="{{ asset('logos/impulsion/logo-primary-light.svg') }}" alt="">
-                    <img width="25px" class="block dark:hidden" src="{{ asset('logos/impulsion/logo-primary-dark.svg') }}" alt="">
-                </a>
-                <a href="https://dj2v.thewebanswer.net/" target="_blank" class="flex flex-row items-center gap-1">
-                    <img width="25px" class="hidden dark:block" src="{{ asset('logos/dj2v/logo-primary-light-gradient.svg') }}" alt="">
-                    <img width="25px" class="block dark:hidden" src="{{ asset('logos/dj2v/logo-primary-dark-gradient.svg') }}" alt="">
-                </a>
-                <a href="https://music.thewebanswer.net/" target="_blank" class="flex flex-row items-center gap-1">
-                    <img width="25px" class="hidden dark:block" src="{{ asset('logos/music/logo-primary-light-gradient.svg') }}" alt="">
-                    <img width="25px" class="block dark:hidden" src="{{ asset('logos/music/logo-primary-dark-gradient.svg') }}" alt="">
-                </a>
-            </li>
-        </ul>
-        <p>Lucas Warlop | TheWebAnswer</p>
+        {% include 'partials/footer/_socials.html.twig' %}
+        {% include 'partials/footer/_ecosystem.html.twig' %}
+        <p class="mt-6 text-sm text-slate-500 sm:mt-0">Copyright © 2023 | Lucas Warlop | TheWebAnswer | Boilerplate |
+            <a href="{{ asset('misc/Mentions légales et politique de confidentialité.pdf') }}" target="_blank">Mentions légales et politique de confidentialité</a>
+        </p>
         <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
             <img alt="Licence Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" />
         </a>
