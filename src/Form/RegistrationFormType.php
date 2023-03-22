@@ -10,6 +10,7 @@ use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
 use Symfony\Component\Form\Extension\Core\Type\EmailType;
 use Symfony\Component\Form\Extension\Core\Type\PasswordType;
 use Symfony\Component\Form\Extension\Core\Type\RepeatedType;
+use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Validator\Constraints\IsTrue;
@@ -26,6 +27,21 @@ class RegistrationFormType extends AbstractType
                 'attr' => [
                     'placeholder' => 'exemple@gmail.com',
                     'autocomplete' => 'email'
+                ],
+            ])
+            ->add('firstName', TextType::class, [
+                'label' => 'Prénom',
+                'attr' => [
+                    'placeholder' => 'Jean',
+                    'autocomplete' => 'given-name'
+                ],
+
+            ])
+            ->add('lastName', TextType::class, [
+                'label' => 'Nom',
+                'attr' => [
+                    'placeholder' => 'Dupont',
+                    'autocomplete' => 'family-name'
                 ],
             ])
             ->add('agreeTerms', CheckboxType::class, [

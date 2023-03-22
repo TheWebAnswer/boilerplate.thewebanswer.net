@@ -12,6 +12,14 @@
                 type: "email"
             } %}
             {% include "components/form/input/_input-text.html.twig" with {
+                field: registrationForm.firstName,
+                type: "text"
+            } %}
+            {% include "components/form/input/_input-text.html.twig" with {
+                field: registrationForm.lastName,
+                type: "text"
+            } %}
+            {% include "components/form/input/_input-text.html.twig" with {
                 field: registrationForm.plainPassword.first,
                 type: "password"
             } %}
