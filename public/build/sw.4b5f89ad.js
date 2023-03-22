@@ -1,1 +1,0 @@
-(self.webpackChunk=self.webpackChunk||[]).push([[670],{123:()=>{self.addEventListener("install",(function(e){console.log("install evt",e)})),self.addEventListener("fetch",(function(e){console.log("events captures : "),console.log("fetch evt sur url",e.request.url)}))}},e=>{var s;s=123,e(e.s=s)}]);

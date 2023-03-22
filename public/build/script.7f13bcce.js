@@ -1,1 +1,0 @@
-(self.webpackChunk=self.webpackChunk||[]).push([[514],{679:()=>{"serviceWorker"in navigator&&navigator.serviceWorker.register("sw.js").then((function(){console.log("Enregistrement reussi.")})).catch((function(e){console.error(e)}))}},e=>{var r;r=679,e(e.s=r)}]);

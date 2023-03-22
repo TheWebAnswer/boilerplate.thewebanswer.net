@@ -9,18 +9,6 @@
       "css": [
         "/build/app.d743d0a0.css"
       ]
-    },
-    "script": {
-      "js": [
-        "/build/runtime.62bcf186.js",
-        "/build/script.7f13bcce.js"
-      ]
-    },
-    "sw": {
-      "js": [
-        "/build/runtime.62bcf186.js",
-        "/build/sw.4b5f89ad.js"
-      ]
     }
   }
 }
