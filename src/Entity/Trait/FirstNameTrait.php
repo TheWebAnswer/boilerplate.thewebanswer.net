@@ -21,12 +21,12 @@ trait FirstNameTrait
 	#[Assert\Type('string')]
 	private ?string $firstName = null;
 
-	public function getFirstname(): ?string
+	public function getFirstName(): ?string
 	{
 		return $this->firstName;
 	}
 
-	public function setFirstname(string $firstName): self
+	public function setFirstName(string $firstName): self
 	{
 		$this->firstName = $firstName;
 
