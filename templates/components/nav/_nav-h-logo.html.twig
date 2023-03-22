@@ -1,8 +1,9 @@
 <ul class="flex flex-row gap-4 items-center">
     <li>
         <a href="{{ path('app_home') }}">
-            <img width="50px" class="block dark:hidden" src="{{ asset('logos/logo-primary-dark.svg') }}" alt="">
-            <img width="50px" class="hidden dark:block" src="{{ asset('logos/logo-primary-light.svg') }}" alt="">
+            <span class="sr-only">Boilerplate</span>
+            <img width="50px" height="50px" class="block dark:hidden" src="{{ asset('logos/logo-primary-dark.svg') }}" alt="">
+            <img width="50px" height="50px" class="hidden dark:block" src="{{ asset('logos/logo-primary-light.svg') }}" alt="">
         </a>
     </li>
     {% for item in items %}
