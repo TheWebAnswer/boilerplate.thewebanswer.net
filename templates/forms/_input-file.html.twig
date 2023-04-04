@@ -1,0 +1,78 @@
+<div class="flex flex-col gap-1 py-2 w-full">
+    <label
+            for="{{ field.file.vars.id }}"
+            class="
+            block text-sm font-medium
+            {% if field.vars.errors|length > 0 %}
+                text-red-900 dark:text-red-100
+            {% else %}
+                text-primary
+            {% endif %}
+            "
+    >
+        {{ field.vars.label }}
+    </label>
+
+    <input
+            id="{{ field.file.vars.id }}"
+            type="{{ type }}"
+            name="{{ field.file.vars.full_name }}"
+            {% if field.vars.attr.placeholder is defined %}placeholder="{{ field.file.vars.attr.placeholder }}"{% endif %}
+            {% if field.vars.attr.autocomplete is defined %}autocomplete="{{ field.file.vars.attr.autocomplete }}"{% endif %}
+            "
+            class="
+            block w-full
+            text-base rounded border-primary
+            shadow-sm text-dark focus:border-primary
+            focus:ring-primary sm:text-sm
+            {% if field.vars.errors|length > 0 %}
+            text-red-900
+            bg-red-100
+            border-red-300
+            {% else %}
+            text-dark
+            bg-white
+            border-primary
+            {% endif %}
+            "
+    >
+
+    {% if field.vars.errors|length > 0 %}
+        <ul class="
+        text-sm text-red-500
+        ">
+            {% for error in field.vars.errors %}
+                <li><i class="fa-solid fa-triangle-exclamation"></i> {{ error.message }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+
+    {% if field.vars.help is not empty %}
+        <p class="
+    text-sm
+    {% if field.vars.errors|length > 0 %}
+        text-red-500
+    {% else %}
+        text-gray-500
+    {% endif %}
+    "
+        ><i class="fa-solid fa-circle-info"></i> {{ field.vars.help }}</p>
+    {% endif %}
+    {% if field.vars.download_uri is not empty%}
+    <iframe height="500px" class="rounded-lg" id="{{ field.file.vars.id }}-actual" src="{{ field.vars.download_uri }}"></iframe>
+    {% endif %}
+    <iframe height="500px" class="rounded-lg hidden" id="{{ field.file.vars.id }}-preview" src="none"></iframe>
+    <script>
+        const {{ field.vars.id }}btn = document.getElementById("{{ field.file.vars.id }}");
+        {{ field.vars.id }}btn.addEventListener('change', (e) => {
+            if(e.target.files.length > 0){
+                let src = URL.createObjectURL(e.target.files[0]);
+                let actual = document.getElementById("{{ field.file.vars.id }}-actual");
+                let preview = document.getElementById("{{ field.file.vars.id }}-preview");
+                preview.src = src;
+                preview.classList.remove('hidden')
+                actual.classList.add('hidden')
+            }
+        });
+    </script>
+</div>

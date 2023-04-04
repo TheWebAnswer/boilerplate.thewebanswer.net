@@ -1,0 +1,1 @@
+(self.webpackChunk=self.webpackChunk||[]).push([[168],{579:()=>{var e=document.getElementById("toggleDarkModeBtn"),t=(document.getElementById("toggleDarkModeText"),document.documentElement);console.log("hello"),e.addEventListener("click",(function(){console.log("click"),t.classList.toggle("dark")}))}},e=>{var t;t=579,e(e.s=t)}]);

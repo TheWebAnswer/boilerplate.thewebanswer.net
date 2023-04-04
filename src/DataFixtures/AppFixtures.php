@@ -17,6 +17,7 @@ class AppFixtures extends Fixture
     {
         $this->hasher = $hasher;
     }
+
     public function load(ObjectManager $manager): void
     {
         $faker = Faker\Factory::create('fr_FR');
@@ -25,12 +26,21 @@ class AppFixtures extends Fixture
         for ($i = 0; $i < 50; $i++) {
             $features[$i] = new Feature();
             $features[$i]->setTitle($faker->sentence(2));
-            $features[$i]->setDescription($faker->paragraph(3));
+            $features[$i]->setDescription($faker->paragraph(2));
             $features[$i]->setLink($faker->url());
             $features[$i]->setIsDone($faker->boolean(75));
 
             $manager->persist($features[$i]);
         }
+
+        $admin = new User();
+        $admin->setFirstName('Lucas');
+        $admin->setLastName('Warlop');
+        $admin->setEmail('lucas.warlop@thewebanswer.net');
+        $admin->setRoles(["ROLE_ADMIN"]);
+        $admin->setPassword($this->hasher->hashPassword($admin, 'password'));
+        $admin->setIsVerified(true);
+        $manager->persist($admin);
 
         $users = [];
         for ($i = 0; $i < 20; $i++) {

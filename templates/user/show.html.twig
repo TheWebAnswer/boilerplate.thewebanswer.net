@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Mon Profil |{% endblock %}
+
+{% block body %}
+    <section class="flex flex-col items-center gap-5">
+        <div>
+            <img class="w-52 rounded border-2 border-primary" src="{{ vich_uploader_asset(user.avatar, "imageFile") }}"
+                 alt="Default avatar">
+        </div>
+        <div>
+            {% include 'user/_show.html.twig' %}
+        </div>
+        <div>
+            <a href="{{ path('app_user_edit', {id: user.id}) }}">Modifier</a>
+        </div>
+    </section>
+{% endblock %}

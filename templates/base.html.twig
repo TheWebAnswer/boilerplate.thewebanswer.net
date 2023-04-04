@@ -1,19 +1,20 @@
 <!DOCTYPE html>
-<html lang="{{ app.request.locale }}" class="bg-light dark:bg-dark text-dark dark:text-light">
+<html lang="{{ app.request.locale }}" class="dark">
     <head>
         <meta charset="UTF-8">
-        <title>{% block title %}{% endblock %} TheWebAnswer | Boilerplate | Symfony 6 - Modèle de départ pour des applications web performantes</title>
+        <title>{% block title %}{% endblock %} {{ seo_title }}</title>
 
         {% include 'partials/head/metatags.html.twig' %}
         {% include 'partials/head/favicons.html.twig' %}
         {% include 'partials/head/socials.html.twig' %}
         {% include 'partials/head/externals.html.twig' %}
+        {% include 'partials/head/script.html.twig' %}
 
         {% block stylesheets %}
             {{ encore_entry_link_tags('app') }}
         {% endblock %}
     </head>
-    <body>
+    <body class="bg-light dark:bg-dark text-dark dark:text-light">
         <header>
             {% include 'partials/header/_navbar.html.twig' %}
             {% include 'partials/header/_navbar-mobile.html.twig' %}
@@ -27,6 +28,7 @@
         </footer>
         {% block javascripts %}
             {{ encore_entry_script_tags('app') }}
+            {{ encore_entry_script_tags('toggleDarkMode') }}
         {% endblock %}
     </body>
 </html>

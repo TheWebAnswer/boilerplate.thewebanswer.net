@@ -4,8 +4,12 @@ namespace App\Form;
 
 use App\Entity\Feature;
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
 use Symfony\Component\Form\Extension\Core\Type\DateTimeType;
 use Symfony\Component\Form\Extension\Core\Type\DateType;
+use Symfony\Component\Form\Extension\Core\Type\TextareaType;
+use Symfony\Component\Form\Extension\Core\Type\TextType;
+use Symfony\Component\Form\Extension\Core\Type\UrlType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
@@ -14,10 +18,18 @@ class FeatureType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
         $builder
-            ->add('title')
-            ->add('description')
-            ->add('isDone')
-            ->add('link')
+            ->add('title', TextType::class, [
+                'label' => 'Titre',
+            ])
+            ->add('description', TextareaType::class, [
+                'label' => "Description",
+            ])
+            ->add('isDone', CheckboxType::class, [
+                'label' => "Fini ?"
+            ])
+            ->add('link', UrlType::class, [
+                'label' => "Référence"
+            ])
         ;
     }
 

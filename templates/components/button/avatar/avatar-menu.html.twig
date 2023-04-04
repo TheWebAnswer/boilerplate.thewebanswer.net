@@ -1,0 +1,25 @@
+<img id="avatarButton" type="button" data-dropdown-toggle="userDropdown" data-dropdown-placement="bottom-start"
+     class="w-10 h-10 rounded border-2 border-primary cursor-pointer"
+     src="{{ vich_uploader_asset(app.user.avatar, 'imageFile') }}"
+     alt="User dropdown">
+
+<!-- Dropdown menu -->
+<div id="userDropdown"
+     class="z-10 hidden bg-dark divide-y divide-primary-light rounded-lg shadow w-44 dark:bg-light dark:divide-primary-dark">
+    <div class="px-4 py-3 text-sm text-light dark:text-dark">
+        <div>{{ app.user.firstName }} {{ app.user.lastName }}</div>
+        <div class="font-medium truncate">{{ app.user.email }}</div>
+    </div>
+    <ul class="py-2 text-sm text-light dark:text-dark" aria-labelledby="avatarButton">
+        <li>
+            <a href="{{ path('app_user_show', {id: app.user.id}) }}"
+               class="block px-4 py-2 hover:bg-primary-light dark:hover:bg-gray-600 dark:hover:text-dark">Profil</a>
+        </li>
+    </ul>
+    <div class="py-1">
+        <a href="{{ path('app_logout') }}"
+           class="block px-4 py-2 text-sm text-light dark:text-dark hover:bg-primary-light dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-primary-dark">
+            Déconnexion
+        </a>
+    </div>
+</div>

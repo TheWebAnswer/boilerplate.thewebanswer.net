@@ -11,6 +11,10 @@
                 field: registrationForm.email,
                 type: "email"
             } %}
+            {% include 'forms/_input-image.html.twig' with {
+                field: registrationForm.imageFile,
+                type: 'file'
+            } %}
             {% include "components/form/input/_input-text.html.twig" with {
                 field: registrationForm.firstName,
                 type: "text"

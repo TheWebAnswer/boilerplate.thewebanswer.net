@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Feature index{% endblock %}
+
+{% block body %}
+    {% include 'components/header/_section-header.html.twig' with {
+        title: 'Fonctionnalité',
+        description: 'Liste des fonctionnalités de cette boilerplate'
+    } %}
+
+    {% include 'feature/_actions.html.twig' %}
+
+    {% include 'feature/_list.html.twig' %}
+{% endblock %}

@@ -1,0 +1,21 @@
+<form name="{{ form.vars.full_name }}" method="post" enctype="multipart/form-data" class="py-5">
+    {% include 'forms/_input-text.html.twig' with {
+        field: form.firstName,
+        type: 'text'
+    } %}
+    {% include 'forms/_input-text.html.twig' with {
+        field: form.lastName,
+        type: 'text'
+    } %}
+    {% include 'forms/_input-image.html.twig' with {
+        field: form.avatar.imageFile,
+        type: 'file'
+    } %}
+    {{ form_row(form._token) }}
+    {% include  'components/button/simple/_btn-simple-submit.html.twig' with {
+        content: 'Valider',
+        icon: "thumbs-up"
+    } %}
+</form>
+
+

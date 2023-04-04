@@ -1,3 +1,19 @@
+feature:
+  new:
+    success: "Feature successfully added!"
+  edit:
+    success: "Feature successfully updated!"
+  delete:
+    success: "Feature successfully deleted!"
+  error:
+    generic: "An error occurred. Please try again."
+
+user:
+  edit:
+    success: "User successfully edit!"
+  error:
+    generic: "An error occurred. Please try again."
+
 hero_description: The project consists of the development of a boilerplate for the Symfony 6 PHP framework. A boilerplate is a basic model for the creation of a web project, which includes preconfigured basic functionalities, such as authentication, management of users, security, file management, and more.
 hero_btn_1: Git Clone
 hero_btn_2: Discover the features
@@ -5,7 +21,6 @@ hero_btn_2: Discover the features
 projects: projets
 project: projet
 users: utilisateurs
-user: utilisateur
 blog: blog
 sign-in: connexion
 sign-up: inscription

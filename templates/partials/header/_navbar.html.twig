@@ -1,4 +1,4 @@
-<nav class="py-5 px-5 bg-primary-light dark:bg-primary-dark hidden flex-row gap-4 justify-between md:flex">
+<nav class="py-5 px-5 md:px-28 lg:px-56 bg-primary-light dark:bg-primary-dark hidden flex-row gap-4 justify-between md:flex">
     {% include 'components/nav/_nav-h-logo.html.twig' with {
         items: {
             item1: {
@@ -9,15 +9,12 @@
     } %}
 
     {% if app.user %}
-        {% include 'components/nav/_nav-h.html.twig' with {
-            items: {
-                item1: {
-                    content: "Deconnexion",
-                    path: path('app_logout'),
-                    icon: "right-from-bracket"
-                },
-            }
-        } %}
+        <ul class="flex flex-row gap-4 items-center">
+            <li>
+                {% include 'components/button/avatar/avatar-menu.html.twig' %}
+            </li>
+        </ul>
+
     {% else %}
         {% include 'components/nav/_nav-h.html.twig' with {
             items: {

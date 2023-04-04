@@ -2,14 +2,14 @@
 
 namespace App\Entity;
 
-use App\Entity\Trait\CreatedAtTrait;
-use App\Entity\Trait\DescriptionTrait;
-use App\Entity\Trait\IsDoneTrait;
-use App\Entity\Trait\LinkTrait;
-use App\Entity\Trait\SlugTrait;
-use App\Entity\Trait\TitleTrait;
-use App\Entity\Trait\UpdatedAtTrait;
-use App\Entity\Trait\UuidTrait;
+use App\Entity\Traits\Date\CreatedAtTrait;
+use App\Entity\Traits\Text\DescriptionTrait;
+use App\Entity\Traits\Bool\IsDoneTrait;
+use App\Entity\Traits\Url\LinkTrait;
+use App\Entity\Traits\SlugTrait;
+use App\Entity\Traits\String\TitleTrait;
+use App\Entity\Traits\Date\UpdatedAtTrait;
+use App\Entity\Traits\UuidTrait;
 use App\Repository\FeatureRepository;
 use Cocur\Slugify\Slugify;
 use Doctrine\DBAL\Types\Types;

@@ -37,6 +37,7 @@ class RegistrationFormType extends AbstractType
                 ],
 
             ])
+            ->add('avatar', ImageType::class)
             ->add('lastName', TextType::class, [
                 'label' => 'Nom',
                 'attr' => [
@@ -70,15 +71,14 @@ class RegistrationFormType extends AbstractType
                 'type' => PasswordType::class,
                 'invalid_message' => 'Les champs de mot de passe doivent correspondre.',
                 'required' => true,
-                'first_options'  => ['label' => 'Mot de passe'],
+                'first_options' => ['label' => 'Mot de passe'],
                 'second_options' => ['label' => 'Répéter le mot de passe'],
             ])
             ->add('captcha', Recaptcha3Type::class, [
                 'constraints' => new Recaptcha3(),
                 'action_name' => 'register',
                 'locale' => 'fr',
-            ])
-        ;
+            ]);
     }
 
     public function configureOptions(OptionsResolver $resolver): void

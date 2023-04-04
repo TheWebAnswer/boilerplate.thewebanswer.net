@@ -7,7 +7,13 @@
         "/build/app.4232ed26.js"
       ],
       "css": [
-        "/build/app.d743d0a0.css"
+        "/build/app.41bd9ab2.css"
+      ]
+    },
+    "toggleDarkMode": {
+      "js": [
+        "/build/runtime.62bcf186.js",
+        "/build/toggleDarkMode.2e93b6ff.js"
       ]
     }
   }

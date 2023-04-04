@@ -1,0 +1,13 @@
+<label for="{{ field.vars.id }}" class="relative inline-flex items-center cursor-pointer whitespace-nowrap" >
+    <input id="{{ field.vars.id }}" name="{{ field.vars.full_name }}" type="checkbox" {% if field.vars.checked %}checked{% endif%} value="{{ field.vars.value }}" class="sr-only peer">
+    <div class="w-11 h-6 bg-light peer-focus:outline-none peer-focus:ring-1 peer-focus:ring-primary  rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-light after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-primary after:border-primary-light after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-green-500"></div>
+    <span class="ml-3 text-sm font-medium">{{ field.vars.label }}</span>
+</label>
+
+<script>
+    const {{ field.vars.id }}btn = document.getElementById("{{ field.vars.id }}");
+    {{ field.vars.id }}btn.addEventListener('click', (e) => {
+        const toggle = document.getElementById("{{ field.vars.id }}");
+        toggle.toggleAttribute('checked');
+    });
+</script>
