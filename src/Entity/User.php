@@ -5,6 +5,7 @@ namespace App\Entity;
 use App\Entity\Traits\Bool\IsVerifiedTrait;
 use App\Entity\Traits\Date\CreatedAtTrait;
 use App\Entity\Traits\Date\UpdatedAtTrait;
+use App\Entity\Traits\ImageTrait;
 use App\Entity\Traits\PasswordTrait;
 use App\Entity\Traits\RolesTrait;
 use App\Entity\Traits\String\EmailTrait;
@@ -34,10 +35,7 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     use UpdatedAtTrait;
     use LastNameTrait;
     use FirstNameTrait;
-
-    #[ORM\OneToOne(inversedBy: 'user', cascade: ['persist', 'remove'])]
-    #[ORM\JoinColumn(nullable: true)]
-    private ?Image $avatar = null;
+    use ImageTrait;
 
     public function __construct()
     {
@@ -53,7 +51,7 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     public function __sleep()
     {
         // Retourne la liste des propriétés à sérialiser, en excluant 'avatar'
-        return array_diff(array_keys(get_object_vars($this)), ['avatar']);
+        return array_diff(array_keys(get_object_vars($this)), ['imageFile']);
     }
 
     #[ORM\PrePersist]
@@ -77,17 +75,5 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     {
         // If you store any temporary, sensitive data on the user, clear it here
         // $this->plainPassword = null;
-    }
-
-    public function getAvatar(): ?Image
-    {
-        return $this->avatar;
-    }
-
-    public function setAvatar(?Image $avatar): self
-    {
-        $this->avatar = $avatar;
-
-        return $this;
     }
 }
